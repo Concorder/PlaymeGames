@@ -169,7 +169,6 @@ h2 {
 }
 
 .contact {
-    background: var(--surface);
     padding: 120px 0;
     position: relative;
     overflow: hidden;
@@ -181,7 +180,7 @@ h2 {
     top: 0;
     left: 0;
     right: 0;
-    height: 6px;
+    height: 1px;
     background: linear-gradient(90deg, var(--primary), var(--accent));
 }
 
