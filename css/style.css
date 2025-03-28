@@ -124,7 +124,7 @@ h2 {
     font-size: 4rem;
     margin-bottom: 1rem;
     display: inline-block;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     border-radius: 4px;
 }
 
@@ -457,6 +457,10 @@ footer {
 
 .terms-content p {
     margin-bottom: 1.2rem;
+}
+
+.terms-content p strong {
+    display: inline-block;
 }
 
 .contact-info {

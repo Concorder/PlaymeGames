@@ -5,22 +5,29 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastPosition = items.length - 1;
     let firstPosition = 0;
     let active = 0;
-    let slideInterval;
+    let slideInterval = null; // Initialize as null for better checking
 
-    // const startAutoSlide = () => {
-    //     slideInterval = setInterval(() => {
-    //         if (active < lastPosition) {
-    //             active++;
-    //             setSlider();
-    //         } else {
-    //             active = 0;
-    //             setSlider();
-    //         }
-    //     }, 15e3);
-    // };
+    const startAutoSlide = () => {
+        // Clear any existing interval first
+        if (slideInterval) {
+            clearInterval(slideInterval);
+        }
+        slideInterval = setInterval(() => {
+            if (active < lastPosition) {
+                active++;
+                setSlider();
+            } else {
+                active = 0;
+                setSlider();
+            }
+        }, 8e3);
+    };
 
     const stopAutoSlide = () => {
-        clearInterval(slideInterval);
+        if (slideInterval) {
+            clearInterval(slideInterval);
+            slideInterval = null; // Reset to null after clearing
+        }
     };
 
     nextBtn.onclick = () => {
