@@ -43,6 +43,12 @@ header {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     letter-spacing: 0.02em;
+    
+}
+
+h1 {
+    font-weight: 700;
+    color: var(--primary-color);
 }
 
 h2 {
@@ -225,6 +231,19 @@ footer {
     background: var(--surface);
     border-top: 1px solid var(--border);
     padding: 40px 0;
+}
+
+footer .logo {
+    height: 30px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Update footer text alignment */
+footer p {
+    text-align: center;
+    color: var(--text-light);
 }
 
 /* Update Bootstrap components */
@@ -565,5 +584,29 @@ footer {
 @media (max-width: 768px) {
     .country-dropdown .btn {
         min-width: unset;
+    }
+
+    footer .container > div {
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    footer .logo {
+        height: 45px;
+    }
+    .signup-section .container {
+        display: flex;
+        flex-direction: column;
+        gap : 20px;
+    }
+
+    .signup-section h2 {
+        font-size: 2rem;
+    }
+
+    .terms-section h1 {
+        font-size: 2rem;
+        color: var(--primary);
+        font-weight: 600;
     }
 }
