@@ -115,11 +115,16 @@ h2 {
 
 .countries h5 {
     color: var(--text-light);
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
 }
 
 .countries .col-6 {
     transition: transform 0.3s ease;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
 }
 
 .countries .col-6:hover {
@@ -129,9 +134,24 @@ h2 {
 .flag-icon {
     font-size: 4rem;
     margin-bottom: 1rem;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     border-radius: 4px;
+    width: 100px;  /* Set fixed width */
+    height: 75px;  /* Set fixed height */
+    object-fit: cover;
+}
+
+.country-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .advantages {
@@ -301,12 +321,6 @@ footer p {
     margin-bottom: 4rem;
 }
 
-.country-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
 .contact-form .form-control {
     background-color: var(--surface);
     border: 1px solid var(--border);
@@ -431,9 +445,7 @@ footer p {
     display: flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    max-width: 100%;  /* Add this */
 }
 
 .country-dropdown .dropdown-item:hover,
@@ -446,8 +458,17 @@ footer p {
     color: white;
 }
 
+.country-dropdown .dropdown-item span {  /* Add this new rule */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+}
+
 .country-dropdown .fi {
     font-size: 1.2em;
+    margin-right: 8px;  /* Add this */
+    flex-shrink: 0;     /* Add this */
 }
 
 .terms-content {
@@ -560,26 +581,6 @@ footer p {
 
 .terms-content a:hover {
   color: #0052a3;
-}
-.country-dropdown .dropdown-item {
-    color: var(--text);
-    display: flex;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    max-width: 100%;  /* Add this */
-}
-
-.country-dropdown .dropdown-item span {  /* Add this new rule */
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    flex: 1;
-}
-
-.country-dropdown .fi {
-    font-size: 1.2em;
-    margin-right: 8px;  /* Add this */
-    flex-shrink: 0;     /* Add this */
 }
 @media (max-width: 768px) {
     .country-dropdown .btn {
